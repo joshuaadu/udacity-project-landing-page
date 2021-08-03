@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Caveat+Brush&family=Exo:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Pacifico&display=swap");
+@import url(./colors.css);
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: "Exo", sans-serif;
+	color: var(--primary-color-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--primary-color);
+	font-weight: 900;
+}
+
+img {
+	width: 100%;
+}
+.body--wrapper {
+	width: 100%;
+	display: grid;
+}
+
+/*** Header Styles ***/
+header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	height: 3em;
+}
+nav {
+	/* font-family: "Aladin", cursive; */
+}
+.logo {
+	font-family: "Aladin", cursive;
+	/* font-family: "Pacifico", cursive; */
+	font-size: 2em;
+	color: var(--logo-color);
+}
+
+/*** Main Content ***/
+
+section {
+	display: flex;
+}
+
+/* Hero banner */
+.hero {
+	background: url(../asset/david-veksler-2zl0b3NbSjU-unsplash.jpg);
+	width: 100%;
+	height: max-content;
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	justify-content: center;
+}
+
+.hero__text {
+	background-color: rgb(255, 255, 255, 0.7);
+	width: 80%;
+	height: 80%;
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+.hero__button {
+	background-color: var(--button-area-color);
+	color: white;
+	border: none;
+	padding: 1em;
+}
+
+/* Section Items */
+
+/* .section__item:first-child {
+	z-index: 1;
+	width: 100%;
+} */
+.section__item {
+	margin-top: 1em;
+	flex-direction: column;
+}
+.item__img {
+	/* flex: 1 1 70%; */
+}
+
+#section-fruits {
+}
+
+/*** Footer ***/
+footer {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	/* text-align: center; */
+}
+.contact {
+	text-align: center;
+}
+.contact__info {
+	background-color: var(--button-area-color);
+}
+.contact__input,
+.contact__button {
+	color: white;
+	border: none;
+	background: transparent;
+}
+
+.contact__button {
+	text-decoration: underline;
+}
+
+@media screen and (min-width: 481px) {
+	.section__item {
+		flex-flow: row nowrap;
+		column-gap: 1em;
+	}
+
+	section:nth-child(2n) {
+		flex-direction: row-reverse;
+	}
+
+	.item--description {
+		flex: 1 1 50%;
+	}
+
+	.item__img {
+		flex: 1 1 100%;
+	}
+}
+@media screen and (min-width: 769px) {
+	.body--wrapper {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.hero {
+		height: 70vh;
+		align-items: center;
+	}
+	.hero__text {
+		height: max-content;
+	}
+}
