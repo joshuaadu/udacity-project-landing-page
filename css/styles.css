@@ -48,7 +48,14 @@ nav {
 	font-size: 2em;
 	color: var(--logo-color);
 }
-
+.nav__links {
+	display: flex;
+	justify-content: space-between;
+}
+.nav__link {
+	list-style: none;
+	margin-right: 1em;
+}
 /*** Main Content ***/
 
 section {
@@ -95,7 +102,7 @@ section {
 	/* flex: 1 1 70%; */
 }
 
-#section-fruits {
+#section--fruits {
 }
 
 /*** Footer ***/
@@ -117,10 +124,17 @@ footer {
 	color: white;
 	border: none;
 	background: transparent;
+	font-size: 1em;
 }
 
 .contact__button {
 	text-decoration: underline;
+}
+
+.social {
+	width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 @media screen and (min-width: 481px) {
