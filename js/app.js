@@ -35,6 +35,15 @@ const sectionData = [
         class: 'section__item',
         id: 'section--snacks',
     },
+    {
+        title: 'Drinks',
+        description: `Excepteur non anim elit mollit aliquip commodo ad
+        fugiat elit. Cupidatat laborum commodo voluptate
+        exercitation. Eu culpa eu ullamco magna occaecat`,
+        img: `./asset/zach-rowlandson-snacks-unsplash-sm.jpg`,
+        class: 'section__item',
+        id: 'section--drinks',
+    },
     
 ];
 
