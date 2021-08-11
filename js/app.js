@@ -14,7 +14,7 @@ const sectionData = [
         fugiat elit. Cupidatat laborum commodo voluptate
         exercitation. Eu culpa eu ullamco magna occaecat`,
         img: `./asset/fruits-unsplash-sm.jpg`,
-        class: 'section__item',
+        class: 'section__item section',
         id: 'section--fruits',
     },
     {
@@ -23,7 +23,7 @@ const sectionData = [
         fugiat elit. Cupidatat laborum commodo voluptate
         exercitation. Eu culpa eu ullamco magna occaecat`,
         img: `./asset/vegs-unsplash-sm.jpg`,
-        class: 'section__item',
+        class: 'section__item section',
         id: 'section--vegs',
     },
     {
@@ -32,7 +32,7 @@ const sectionData = [
         fugiat elit. Cupidatat laborum commodo voluptate
         exercitation. Eu culpa eu ullamco magna occaecat`,
         img: `./asset/zach-rowlandson-snacks-unsplash-sm.jpg`,
-        class: 'section__item',
+        class: 'section__item section',
         id: 'section--snacks',
     },
     {
@@ -41,7 +41,7 @@ const sectionData = [
         fugiat elit. Cupidatat laborum commodo voluptate
         exercitation. Eu culpa eu ullamco magna occaecat`,
         img: `./asset/zach-rowlandson-snacks-unsplash-sm.jpg`,
-        class: 'section__item',
+        class: 'section__item section',
         id: 'section--drinks',
     },
     
@@ -149,7 +149,7 @@ const scrollToSection = () => {
  * @description Check which section is in Viewport while page is being scrolled and make active
  */
 const pageScrolling = () => {
-    const sections = document.querySelectorAll('.section__item');
+    const sections = document.querySelectorAll('.section');
     document.addEventListener('scroll', () => {
         console.log('scrolling');
         sections.forEach((section) => {
