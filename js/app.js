@@ -7,45 +7,7 @@
  * SectionData array 
  * Stores all sections as objects
  */
-const sectionData = [
-    {
-        title: 'Fruits',
-        description: `Excepteur non anim elit mollit aliquip commodo ad
-        fugiat elit. Cupidatat laborum commodo voluptate
-        exercitation. Eu culpa eu ullamco magna occaecat`,
-        img: `./asset/fruits-unsplash-sm.jpg`,
-        class: 'section__item section',
-        id: 'section--fruits',
-    },
-    {
-        title: 'Vegatables',
-        description: `Excepteur non anim elit mollit aliquip commodo ad
-        fugiat elit. Cupidatat laborum commodo voluptate
-        exercitation. Eu culpa eu ullamco magna occaecat`,
-        img: `./asset/vegs-unsplash-sm.jpg`,
-        class: 'section__item section',
-        id: 'section--vegs',
-    },
-    {
-        title: 'Snacks',
-        description: `Excepteur non anim elit mollit aliquip commodo ad
-        fugiat elit. Cupidatat laborum commodo voluptate
-        exercitation. Eu culpa eu ullamco magna occaecat`,
-        img: `./asset/zach-rowlandson-snacks-unsplash-sm.jpg`,
-        class: 'section__item section',
-        id: 'section--snacks',
-    },
-    {
-        title: 'Drinks',
-        description: `Excepteur non anim elit mollit aliquip commodo ad
-        fugiat elit. Cupidatat laborum commodo voluptate
-        exercitation. Eu culpa eu ullamco magna occaecat`,
-        img: `./asset/zach-rowlandson-snacks-unsplash-sm.jpg`,
-        class: 'section__item section',
-        id: 'section--drinks',
-    },
-    
-];
+const sections = Array.from(document.getElementsByTagName('section'));
 
 /**
  * @description check if section is in viewport with is it bounding client dimensions
@@ -69,11 +31,11 @@ const updateNavBar = () => {
     // Select ul for links
     const navBar = document.querySelector('.nav__links');
     // iterate through section data and create links in the nav bar
-    for (const section of sectionData) {
+    for (const section of sections) {
         let link = document.createElement('li');
         let anchor = document.createElement('a');
         anchor.href = `#${section.id}`;
-        anchor.textContent = section.title;
+        anchor.textContent = section.getAttribute('data-nav');
         link.classList = 'nav__link';
         link.appendChild(anchor);
         navBar.appendChild(link);
@@ -81,35 +43,7 @@ const updateNavBar = () => {
 
 };
 
-/**
- * @description Create sections and update  the main element
- */
-const createSections = () => {
-    
-    for (const section of sectionData) {
-        const main = document.querySelector('main');
-        const sectionDiv = document.createElement('section');
-        const descriptionDiv = document.createElement('div');
-        const imgDiv = document.createElement('div');
-        const heading = document.createElement('h2');
-        const para = document.createElement('p');
-        const img = document.createElement('img');
-        sectionDiv.classList = section.class;
-        sectionDiv.id = section.id;
-        descriptionDiv.classList = 'item--description';
-        imgDiv.classList = 'item__img'
-        heading.textContent = section.title;
-        para.textContent = section.description;
-        img.setAttribute('src', section.img);
 
-        descriptionDiv.append(heading, para);
-        imgDiv.appendChild(img);
-
-        sectionDiv.append(descriptionDiv, imgDiv);
-
-        main.appendChild(sectionDiv);
-    }
-}
 
 /**
  * @description mark nav link and corresponding section as active
@@ -163,6 +97,5 @@ const pageScrolling = () => {
 
 
 updateNavBar();
-createSections();
 scrollToSection();
 pageScrolling();
