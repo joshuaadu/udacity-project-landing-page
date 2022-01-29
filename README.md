@@ -1,4 +1,4 @@
-# udacity-project-landing-page
+# Betty's Groceries
 
 ## Description
 This landing page is a multi-section landing page, with dynamically updating navigational menu based on the amount of content that is added to the page.
